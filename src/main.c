@@ -6,6 +6,7 @@
 #include "lcd.h"
 
 constexpr uint8_t LCD_ADDR = 0x26;
+constexpr uint16_t display_rotation_delay = 500;
 
 int main(void) {
     sei();
@@ -30,7 +31,7 @@ int main(void) {
 
         for (size_t i = 0; i < 3; i++) {
             lcd_writeLines(hello[i][0], hello[i][1], true);
-            _delay_ms(2000);  // Delay 500 milliseconds
+            _delay_ms(display_rotation_delay);
         }
 
         // Set PD2 low
