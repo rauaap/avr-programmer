@@ -6,7 +6,7 @@ CC = avr-gcc
 OBJCOPY = avr-objcopy
 MCU = atmega328p
 F_CPU = 8000000UL
-CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -I$(INCLUDE_DIR)
+CFLAGS = -mmcu=$(MCU) -DF_CPU=$(F_CPU) -Os -Wall -Wextra -I$(INCLUDE_DIR) -std=c23
 LDFLAGS = -mmcu=$(MCU)
 PROGRAMMER = stk500v1
 

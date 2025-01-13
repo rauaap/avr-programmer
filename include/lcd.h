@@ -2,50 +2,49 @@
 #define LCD_H
 
 #include <stdint.h>
-#include <stdbool.h>
 
 // Register select (0 for instructions 1 for data)
-#define RS 0b00000001
+constexpr uint8_t RS = 0b00000001;
 // Read-write bit
-#define RW 0b00000010
+constexpr uint8_t RW = 0b00000010;
 // Start data read-write bit
-#define E 0b00000100
+constexpr uint8_t E = 0b00000100;
 // Backlight bit
-#define BL 0b00001000
+constexpr uint8_t BL = 0b00001000;
 
-#define POWER_ON_DELAY 50 //milliseconds
-#define INIT_DELAY1 5 //milliseconds
-#define INIT_DELAY2 120 //microseconds
-#define COMMAND_DELAY 40 //microseconds
-#define HOME_CLEAR_DELAY 2 //milliseconds
+constexpr uint8_t POWER_ON_DELAY = 50; //milliseconds
+constexpr uint8_t INIT_DELAY1 = 5; //milliseconds
+constexpr uint8_t INIT_DELAY2 = 120; //microseconds
+constexpr uint8_t COMMAND_DELAY = 40; //microseconds
+constexpr uint8_t HOME_CLEAR_DELAY = 2; //milliseconds
 
-#define INIT_BYTE 0b00000011
+constexpr uint8_t INIT_BYTE = 0b00000011;
 
 // See 44780 datasheet page 25-27 for symbol explanations
-#define ENTRY_MODE 0b00000100
-#define ID         0b00000010
-#define S          0b00000001
+constexpr uint8_t ENTRY_MODE = 0b00000100;
+constexpr uint8_t ID =         0b00000010;
+constexpr uint8_t S =          0b00000001;
 
-#define DISPLAY_CONTROL 0b00001000
-#define D               0b00000100
-#define C               0b00000010
-#define B               0b00000001
+constexpr uint8_t DISPLAY_CONTROL = 0b00001000;
+constexpr uint8_t D =               0b00000100;
+constexpr uint8_t C =               0b00000010;
+constexpr uint8_t B =               0b00000001;
 
-#define CURSOR_SHIFT 0b00010000
-#define SC           0b00001000
-#define RL           0b00000100
+constexpr uint8_t CURSOR_SHIFT = 0b00010000;
+constexpr uint8_t SC =           0b00001000;
+constexpr uint8_t RL =           0b00000100;
 
-#define FUNCTION_SET 0b00100000
-#define DL           0b00010000
-#define N            0b00001000
-#define F            0b00000100
+constexpr uint8_t FUNCTION_SET = 0b00100000;
+constexpr uint8_t DL =           0b00010000;
+constexpr uint8_t N =            0b00001000;
+constexpr uint8_t F =            0b00000100;
 
-#define SET_DDRAM_ADDR 0b10000000
+constexpr uint8_t SET_DDRAM_ADDR = 0b10000000;
 
-#define CLEAR 0b00000001
-#define HOME 0b00000010
+constexpr uint8_t CLEAR = 0b00000001;
+constexpr uint8_t HOME = 0b00000010;
 
-#define BLANK_LINE "                "
+constexpr char BLANK_LINE[] = "                ";
 
 void lcd_baseInit();
 void _lcd_write(uint8_t command, uint8_t rs);

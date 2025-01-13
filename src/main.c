@@ -5,7 +5,7 @@
 #include "i2c.h"
 #include "lcd.h"
 
-const uint8_t LCD_ADDR = 0x26;
+constexpr uint8_t LCD_ADDR = 0x26;
 
 int main(void) {
     sei();
