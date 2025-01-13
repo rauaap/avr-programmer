@@ -9,7 +9,7 @@ This project was made as an exercise in bare metal programming and using make as
 ## Project Source Code
 
 - `i2c.c`: Contains the code that drives the I2C compatible [2-wire Serial Interface](https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf#G1198998) peripheral.
-- `lcd.c`: Contains the code that utilizes the I2C peripheral to drive a [HD44780 LCD controller](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller).
+- `lcd.c`: Contains the code that utilizes the I2C peripheral to drive an [HD44780 LCD controller](https://en.wikipedia.org/wiki/Hitachi_HD44780_LCD_controller).
 - `main.c`: The main program code. Utilizes `lcd.c` and `i2c.c` to display text on an HD44780 display.
 
 ## Hardware Components
